@@ -5,7 +5,7 @@ import { Answer } from '@state/RecordTypes/wheres_alex_vxxx';
 type HideAlexProps = {
   setAnswer: (answer: Answer) => void;
   answer?: Answer;
-  hiding: boolean; // are we hiding alex? or finding alex?
+  hiding: boolean; // are we hiding Daniel? or finding Daniel?
 };
 
 function ChooseAlexLocation({ setAnswer, answer, hiding }: HideAlexProps) {
