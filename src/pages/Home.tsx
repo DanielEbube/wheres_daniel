@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@components/Button';
 import TotalWinnings from '@components/TotalWinnings';
@@ -6,6 +7,7 @@ import YourTurn from '@components/YourTurn';
 import { useGameStore } from '@state/gameStore';
 import { useNewGameStore } from './NewGame/store';
 import { useAccount } from '@puzzlehq/sdk';
+import backpackerImage from '@assets/fun-illustration-3d-cartoon-backpacker-removebg-preview.png';
 
 function Home() {
   const [yourTurn, theirTurn, totalBalance] = useGameStore((state) => [
@@ -17,10 +19,17 @@ function Home() {
   const { account } = useAccount();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // Any cleanup or additional logic can be added here
+    // if needed for the component
+    return () => {
+      // Cleanup logic, if required
+    };
+  }, []); // Empty dependency array to run the effect only once on mount
+
   return (
     <div className='flex h-full flex-col justify-between '>
       <div className='flex w-full flex-col gap-4 px-1'>
-        <TotalWinnings amount={totalBalance} />
         <Button
           color='yellow'
           onClick={() => {
@@ -32,6 +41,7 @@ function Home() {
         >
           NEW GAME
         </Button>
+        <TotalWinnings amount={totalBalance} color='orange' />
         {yourTurn.length > 0 && <YourTurn games={yourTurn} />}
         {theirTurn.length > 0 && <TheirTurn games={theirTurn} />}
         {yourTurn.length === 0 && theirTurn.length === 0 && (
@@ -41,9 +51,15 @@ function Home() {
         )}
       </div>
       <div className='mt-4 px-4 pb-4 text-center'>
-        {' '}
-        {/* Adding px-4 back here to maintain padding for the bottom button */}
-        <Button color='blue' size='sm'>
+        <img
+          src={backpackerImage}
+          alt='Backpacker Image'
+          style={{
+            width: '50%', // Adjust the size of the image
+            maxHeight: '200px', // Set a maximum height if needed
+          }}
+        />
+        <Button color='pink' size='sm'>
           Past Games
         </Button>
       </div>

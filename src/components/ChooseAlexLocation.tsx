@@ -28,11 +28,11 @@ function ChooseAlexLocation({ setAnswer, answer, hiding }: HideAlexProps) {
       <p className='self-center whitespace-nowrap text-center text-sm font-extrabold tracking-tight text-primary-green'>
         {((): string => {
           if (answer === undefined && hiding) {
-            return 'Choose where to hide Daniel';
+            return 'Choose where to hide The Treasure';
           } else if (hiding) {
-            return `You chose to hide Daniel ${answer}`;
+            return `You chose to hide the Treasure ${answer}`;
           } else {
-            return `You think Daniel is ${answer}`;
+            return `You think The Treasure is ${answer}`;
           }
         })()}
       </p>

@@ -17,12 +17,16 @@ function NewGame() {
   const opponent = inputs?.opponent;
 
   return (
-    <div className='flex h-full w-full flex-col items-center justify-between gap-2 px-5'>
+    <div
+      className='flex h-full w-full flex-col items-center justify-between gap-2 px-5'
+      style={{
+        backgroundImage: `url('C:\\Users\\USER\\OneDrive\\Desktop\\wheres_daniel\\src\\assets\\42522-removebg-preview.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <Nav step={1} />
-      <PageHeader
-        text='WHO WOULD YOU LIKE TO CHALLENGE?'
-        bg='bg-primary-blue'
-      />
+      <PageHeader text='WHO WOULD YOU LIKE TO CHALLENGE?' bg='bg-primary-blue' />
       <input
         type='text'
         className='mt-5 w-full rounded-lg border-[3px] border-solid border-primary-gray bg-transparent p-4 text-sm font-semibold leading-4 max-md:mr-px'

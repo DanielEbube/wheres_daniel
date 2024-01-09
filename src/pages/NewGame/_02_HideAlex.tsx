@@ -6,7 +6,7 @@ import Button from '@components/Button';
 import { Answer } from '@state/RecordTypes/wheres_alex_vxxx';
 import { Step, useNewGameStore } from './store';
 
-function HideAlex() {
+function HideTheTreasure() {
   const [inputs, setInputs, setStep] = useNewGameStore((state) => [
     state.inputs,
     state.setInputs,
@@ -42,4 +42,4 @@ function HideAlex() {
   );
 }
 
-export default HideAlex;
+export default HideTheTreasure;

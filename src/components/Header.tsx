@@ -8,22 +8,30 @@ export const AppHeader = () => {
   const { disconnect, loading } = useDisconnect();
   const navigate = useNavigate();
 
+  const questKnightStyle = {
+    fontFamily: 'Quest Knight, sans-serif', // Assuming Quest Knight is the font name
+    fontWeight: 'bold', // Thicken the text
+    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // Solid text shadow
+    textAlign: 'center', // Center the text
+    fontSize: '2em', // Increase font size by twice its present size
+    lineHeight: '1.5', // Adjust the line spacing
+  };
+
   return (
-    <div className='flex w-full items-stretch justify-between gap-5  p-4'>
+    <div className='flex flex-col items-center w-full gap-5 p-4'>
       {account && account.address ? (
         <>
-          <button
-            onClick={() => {
-              useGameStore.getState().clearFlowStores();
-              navigate('/');
-            }}
-          >
-            <img
-              loading='lazy'
-              src='https://cdn.builder.io/api/v1/image/assets/TEMP/cd84c866-46d9-4d71-af0b-2055777b3fcb?'
-              className='aspect-[2.95] w-[161px] max-w-full self-stretch overflow-hidden fill-white object-cover object-center'
-            />
-          </button>
+          <div style={questKnightStyle}>
+            <button
+              onClick={() => {
+                useGameStore.getState().clearFlowStores();
+                navigate('/');
+              }}
+            >
+              <strong>WHERE'S</strong>
+            </button>
+            <div><strong>THE TREASURE?</strong></div>
+          </div>
           <Button
             size='sm'
             color='white'
