@@ -36,7 +36,7 @@ const questKnightStyle: React.CSSProperties = {
           </div>
           <Button
             size='sm'
-            color='white'
+            color='white' // Add the 'color' prop
             className='w-fit'
             onClick={disconnect}
             disabled={loading}
