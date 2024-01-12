@@ -41,7 +41,7 @@ function Home() {
         >
           NEW GAME
         </Button>
-        <TotalWinnings amount={totalBalance} color ='orange' />
+        <TotalWinnings amount={totalBalance} /> {/* Remove color attribute */}
         {yourTurn.length > 0 && <YourTurn games={yourTurn} />}
         {theirTurn.length > 0 && <TheirTurn games={theirTurn} />}
         {yourTurn.length === 0 && theirTurn.length === 0 && (

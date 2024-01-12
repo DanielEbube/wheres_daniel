@@ -8,14 +8,16 @@ export const AppHeader = () => {
   const { disconnect, loading } = useDisconnect();
   const navigate = useNavigate();
 
-  const questKnightStyle = {
-    fontFamily: 'Quest Knight, sans-serif', // Assuming Quest Knight is the font name
-    fontWeight: 'bold', // Thicken the text
-    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // Solid text shadow
-    textAlign: 'center', // Center the text
-    fontSize: '2em', // Increase font size by twice its present size
-    lineHeight: '1.5', // Adjust the line spacing
-  };
+const questKnightStyle: React.CSSProperties = {
+  fontFamily: 'Quest Knight, sans-serif',
+  fontWeight: 'bold',
+  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+  textAlign: 'center' as 'center', // Use string literal type directly
+  fontSize: '2em',
+  lineHeight: '1.5',
+};
+
+
 
   return (
     <div className='flex flex-col items-center w-full gap-5 p-4'>

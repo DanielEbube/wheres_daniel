@@ -24,10 +24,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 900; /* Use a heavier font weight, adjust as needed */
+  font-family: 'Your Solid Font', sans-serif; /* Replace 'Your Solid Font' with the actual font you want to use */
 }
 
 .custom-scrollbar::-webkit-scrollbar,
@@ -52,26 +53,10 @@ h1 {
 }
 
 .App {
-  background-image: url('../src/assets/puzzle_upside_down_left.png'),
-    url('../src/assets/puzzle_tilt_right.png'),
-    url('../src/assets/puzzle_tilt_left.png'),
-    url('../src/assets/puzzle_upside_down_right.png');
-
-  background-position:
-    left 10%,
-    right 25%,
-    left 90%,
-    right 75%;
-
-  /* Set the size for each image to cover 25% vertically */
-  background-size:
-    auto 20%,
-    auto 20%,
-    auto 20%,
-    auto 20%;
-
-  background-repeat: no-repeat;
-}
+  background-image: url('../src/assets/nature-beauty-blue-sky-green-landscape-generative-ai.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
