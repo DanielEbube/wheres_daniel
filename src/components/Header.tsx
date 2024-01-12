@@ -12,7 +12,7 @@ const questKnightStyle: React.CSSProperties = {
   fontFamily: 'Quest Knight, sans-serif',
   fontWeight: 'bold',
   textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-  textAlign: 'center' as 'center', // Use string literal type directly
+  textAlign: 'center', // Use string literal type directly
   fontSize: '2em',
   lineHeight: '1.5',
 };
